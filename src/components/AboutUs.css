@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+.contentContainer {
+  flex-direction: column !important;
+}
+.introductionPragraph {
+  color: white;
+  font-size: 20px;
+}
+.textContainer {
+  color: white;
+  border: 1px solid transparent;
+  backdrop-filter: blur(9px);
+  box-shadow: inset 0px 0px 5px 0px rgb(0 0 0 / 20%);
+  resize: none;
+  text-align: justify;
+  border-radius: 20px;
+  height: 54%;
+}
+.nameAndWelcomHeading {
+  font-size: 28px;
+}
+.mySelfHeadin {
+  font-weight: bold;
+  color: rgb(8, 253, 216);
+  font-size: 60px;
+  font-family: auto;
+  text-shadow: 2px 1px #fd2155;
+}
+.nameHeading {
+  color: white;
+  font-weight: bolder;
+  font-family: "Dancing Script", cursive;
+  font-size: 53px;
+  text-shadow: -2px 0px 0px black;
+}
+.qouteLine {
+  font-style: italic;
+  color: rgb(8, 253, 216);
+  text-shadow: 1px 1px #fd2155;
+}
+.imgContainer {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.imgContainer img {
+  width: 230px;
+  display: block;
+  box-shadow: 1p 1px black;
+}
+.btnContainer {
+  flex-direction: row !important;
+}
+.aboutBtn {
+  width: 164px;
+  border: 1px solid #3498db;
+  background: none;
+  color: white;
+  font-size: 15px;
+  /* margin: 10px; */
+  font-weight: bold;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.aboutBtn2:hover {
+  color: #fff;
+}
+.aboutBtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 165, 226, 1) 0%,
+    rgba(66, 131, 235, 1) 100%
+  );
+  z-index: -1;
+  transition: 0.8s;
+}
+.aboutBtn1::before {
+  height: 180%;
+}
+.aboutBtn1::before {
+  top: 0;
+  border-radius: 0% 0% 50% 50%;
+}
+.aboutBtn2::before {
+  top: 0;
+  border-radius: 0% 0% 50% 50%;
+}
+.aboutBtn1:hover:before {
+  height: 0%;
+}
+.aboutBtn2:hover::before {
+  height: 100%;
+}
+.Arrow {
+  background-color: white;
+  padding: 20px;
+  color: gray;
+  position: relative;
+  left: 21px;
+}

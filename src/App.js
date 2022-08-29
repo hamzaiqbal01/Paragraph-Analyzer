@@ -1,61 +1,38 @@
+import React from "react";
 import "./helloWorld.css";
+import AboutUsStyle from "./components/AboutUs.css";
+import imgContainerCss from "./components/imgContainer.css";
+import Navbar from "./components/Navbar.js";
+import ImgContainer from "./components/ImgContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/About.js";
 
 //Babel compiles JSX down to React.createElement() calls.
 
 function App() {
+  const changeBackground = (cls) => {
+    removeClasses();
+    if (cls === "blueTheme") {
+      console.log(cls);
+      document.body.classList.add("blueTheme");
+      console.log("body image set");
+    } else if (cls === "summerGarden") {
+      document.body.classList.add("summerTheme");
+    }
+  };
+  const removeClasses = () => {
+    document.body.classList.remove("blueTheme");
+    document.body.classList.remove("summerTheme");
+  };
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid navContainer">
-          <a className="navbar-brand" href="/">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0  mx-auto text-center">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Contact Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Newslater
-                </a>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2 rounded-5"
-                type="search"
-                placeholder="Search"
-                aria-label="Search "
-              />
-            </form>
-          </div>
-        </div>
-      </nav>
-      <div className="cotainer-fluid border imgContainer"></div>
+      <BrowserRouter>
+        <Navbar changeBackground={changeBackground} />
+        <Routes>
+          <Route exact path="/" element={<ImgContainer />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

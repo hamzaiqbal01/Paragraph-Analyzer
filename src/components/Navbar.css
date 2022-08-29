@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("../images/blurbg.png");
+  background-position: center;
+  background-size: cover;
+  transition: 0.8s;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  backdrop-filter: blur(9px);
+}
+.navbar-nav {
+  justify-content: center;
+}
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-item {
+  margin: auto 30px;
+}
+.nav-link {
+  color: white;
+  font-size: 20px;
+}
+.nav-link:hover {
+  color: gray;
+}
+.imgContainer {
+  height: 65vh;
+}
+.logoImg {
+  width: 54px;
+}
+.icons-group {
+  border: 1px soid red;
+}
+.icons-group img {
+  width: 43px;
+  margin: 0px 5px;
+}
+.blueTheme {
+  background-image: url("../images/blurbg.png");
+}
+.summerTheme {
+  background-image: url("../images/theme2.png");
+}
+.themeMenu {
+  display: flex;
+  margin: 2px;
+}
+.themeMenu:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.menuImgContainer {
+  width: 25px;
+  border-radius: 14px;
+  background-image: url("../images/blurbg.png");
+  background-position: center;
+  background-size: cover;
+}
+.menuImgContainer2 {
+  background-image: url("../images/theme2.png");
+}
+@media only screen and (max-width: 992px) {
+  .icons-group {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
